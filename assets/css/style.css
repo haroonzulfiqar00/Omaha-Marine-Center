@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI";
+}
+
+
+@font-face {
+    font-family: "Segoe UI";
+    src: url("/assets/fonts/segoe-ui/segoeuithis.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Segoe UI";
+    src: url("/assets/fonts/segoe-ui/segoeuithisi.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Segoe UI";
+    src: url("/assets/fonts/segoe-ui/segoeuithibd.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Segoe UI";
+    src: url("/assets/fonts/segoe-ui/segoeuithisz.ttf") format("truetype");
+    font-weight: 700;
+    font-style: italic;
+}
+
+.segeo-regular {
+    font-family: "Segoe UI";
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --black-color: #111;
+    --white-color: #fff;
+    --Light-Blue: #b4e3f6;
+    --Back-Blue: #161a1f;
+    --Blue1: #0d3d64;
+    --Navy-Blue: #0e233a;
+    --font-family-Body: "Jost";
+}
+
+/* Common css start here  */
+
+a {
+    text-decoration: none;
+}
+.row{
+    margin: 0;
+}
+a:hover {
+    text-decoration: none;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.my-40 {
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.my-30 {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.my-80 {
+    margin-bottom: 80px;
+    margin-top: 80px;
+}
+
+.py-120 {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+p {
+    font-family: "Segoe UI";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+ul {
+    margin-bottom: 0;
+}
+
+
+.blue-btn {
+    color: #FFF;
+    text-align: center;
+    font-family: "Segoe UI";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 20px;
+    background: #4D91D5;
+}
+
+.blue-btn:hover {
+    background: #1e4770;
+}
+.darkblue-btn {
+    color: #FFF;
+    text-align: center;
+    font-family: "Segoe UI";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 20px;
+    background: #131439;
+}
+
+.darkblue-btn:hover {
+    background: #00012b;
+}
+
+h1 {
+    font-family: "Segoe UI";
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 88px;
+}
+
+h2 {
+    color: #131439;
+    font-family: "Segoe UI";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 48px; 
+}
+
+h3 {
+    text-align: center;
+    font-family: "Segoe UI";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 48px; 
+}
+h4 {
+    color: #131439;
+    font-family: "Segoe UI";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 32px; 
+}
+
+h4 {
+    font-family: "Segoe UI";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+}
+
+h5 {
+    font-family: "Segoe UI";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+p span {
+    color: #FFF;
+    font-family: "Segoe UI";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; 
+    letter-spacing: 4.8px;
+    text-transform: uppercase;
+}
