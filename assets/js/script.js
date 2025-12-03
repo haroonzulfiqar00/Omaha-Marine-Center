@@ -113,4 +113,35 @@ $(document).ready(function() {
         }
     });
 
+    // Testimonials Carousel
+    $('.testimonials-carousel').owlCarousel({
+        loop: true,
+        margin: 30,
+        nav: true,
+        dots: true,
+        center: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        smartSpeed: 600,
+        navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
+        responsive: {
+            0: {
+                items: 1,
+                margin: 10,
+                center: false
+            },
+            768: {
+                items: 2,
+                margin: 20,
+                center: false
+            },
+            992: {
+                items: 3,
+                margin: 30,
+                center: true
+            }
+        }
+    });
+
 });
