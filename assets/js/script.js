@@ -144,4 +144,23 @@ $(document).ready(function() {
         }
     });
 
+    // Footer Accordion Functionality
+    $('.accordion-header').on('click', function() {
+        const $this = $(this);
+        const target = $this.data('target');
+        const $content = $(target);
+
+        // Check if this accordion has content
+        if ($content.length > 0) {
+            // Toggle the collapsed class on the button
+            $this.toggleClass('collapsed');
+
+            // Toggle the content
+            $content.collapse('toggle');
+        }
+    });
+
+    // Initially set all accordion headers as collapsed
+    $('.accordion-header').addClass('collapsed');
+
 });
