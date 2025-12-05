@@ -133,7 +133,6 @@ h2 {
 }
 
 h3 {
-  text-align: center;
   font-family: "Segoe UI";
   font-size: 40px;
   font-style: normal;
@@ -147,14 +146,6 @@ h4 {
   font-style: normal;
   font-weight: 900;
   line-height: 32px;
-}
-
-h4 {
-  font-family: "Segoe UI";
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 40px;
 }
 
 h5 {
@@ -2302,7 +2293,7 @@ footer {
   width: 100%;
   height: 100%;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
 }
 
@@ -2314,7 +2305,7 @@ footer {
 }
 
 .seawall-esp-logo {
-  max-width: 180px;
+  max-width: 320px;
   width: 100%;
   height: auto;
   margin-bottom: 30px;
@@ -2323,21 +2314,21 @@ footer {
 .seawall-hero-title {
   color: var(--white-color);
   font-family: "Segoe UI";
-  font-size: 56px;
+  font-size: 80px;
   font-weight: 700;
   line-height: 1.2;
   margin: 0;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  /* text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); */
 }
 
 /* Intro Text Section */
 .seawall-intro-section {
-  padding: 50px 0;
+  padding-top: 50px;
   background: var(--white-color);
 }
 
 .seawall-intro-text {
-color:  #131439;
+  color: #131439;
 text-align: center;
 font-family: "Segoe UI";
 font-size: 24px;
@@ -2494,8 +2485,8 @@ line-height: 32px;
 }
 
 .seawall-step-number {
-  width: 80px;
-  height: 80px;
+  width: 64px;
+  height: 64px;
   background: #4d91d5;
   border-radius: 50%;
   display: flex;
@@ -2504,7 +2495,7 @@ line-height: 32px;
   margin: 0 auto 25px;
   color: var(--white-color);
   font-family: "Segoe UI";
- font-size: 40px;
+ font-size: 24px;
   font-weight: 700;
 }
 
@@ -2521,7 +2512,7 @@ line-height: 32px;
 .seawall-step-text {
   color: rgba(255, 255, 255, 0.8);
   font-family: "Segoe UI";
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.6;
   margin-bottom: 0;
@@ -2530,7 +2521,6 @@ line-height: 32px;
 /* Quote Form Section */
 .seawall-quote-section {
   padding: 80px 0;
-  background: #f8f9fa;
 }
 
 .seawall-form-subtitle {
@@ -2562,22 +2552,14 @@ line-height: 32px;
 .seawall-form-input,
 .seawall-form-textarea {
   width: 100%;
-  padding: 12px 0;
-  font-family: "Segoe UI";
-  font-size: 16px;
+  padding: 12px;
   font-weight: 400;
   color: #333;
-  background: transparent;
-  border: none;
-  border-bottom: 2px solid #ddd;
+  background: #FAFAFA;
+  border: 2px solid #D9D9D9;
   outline: none;
-  transition: border-color 0.3s ease;
 }
 
-.seawall-form-input:focus,
-.seawall-form-textarea:focus {
-  border-bottom-color: #4d91d5;
-}
 
 .seawall-form-input::placeholder,
 .seawall-form-textarea::placeholder {
@@ -2610,7 +2592,7 @@ line-height: 32px;
   }
 
   .seawall-intro-section {
-    padding: 50px 0;
+    padding-top: 30px;
   }
 
   .seawall-intro-text {
@@ -2643,9 +2625,9 @@ line-height: 32px;
   }
 
   .seawall-step-number {
-    width: 70px;
-    height: 70px;
-    font-size: 32px;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
     margin-bottom: 20px;
   }
 }
@@ -2710,9 +2692,9 @@ line-height: 32px;
   }
 
   .seawall-step-number {
-    width: 60px;
-    height: 60px;
-    font-size: 28px;
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
     margin-bottom: 15px;
   }
 
@@ -2755,5 +2737,1405 @@ line-height: 32px;
   .seawall-form-btn {
     width: 100%;
     display: block;
+  }
+}
+
+/* ====================================
+   TRADE/CONSIGN PAGE STYLES
+==================================== */
+
+/* Hero Banner - REUSING SEAWALL STRUCTURE - Only new class for subtitle */
+.trade-hero-subtitle {
+    color: var(--white-color);
+    font-family: "Segoe UI";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Key Points Section */
+.consign-keypoints-section {
+    padding: 80px 0;
+    background: var(--white-color);
+}
+
+.consign-section-subtitle {
+    color: #4d91d5;
+    font-family: "Segoe UI";
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.consign-section-title {
+    color: #131439;
+    font-family: "Segoe UI";
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 1.3;
+    margin-bottom: 30px;
+}
+
+.consign-requirements-list {
+    margin-bottom: 15px;
+}
+
+.consign-req-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    color: #131439;
+    font-family: "Segoe UI";
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.consign-req-item i {
+    color: #4d91d5;
+    font-size: 20px;
+    margin-right: 12px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.consign-exclusion-list {
+    list-style: none;
+    padding-left: 35px;
+    margin-bottom: 25px;
+}
+
+.consign-exclusion-list li {
+    color: #666;
+    font-family: "Segoe UI";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.8;
+    position: relative;
+    padding-left: 15px;
+}
+
+.consign-exclusion-list li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #4d91d5;
+}
+
+.consign-additional-info {
+    margin-bottom: 30px;
+}
+
+.consign-info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    color: #333;
+    font-family: "Segoe UI";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.consign-info-item i {
+    color: #4d91d5;
+    font-size: 20px;
+    margin-right: 12px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.consign-cta-btn {
+    padding: 12px 35px;
+}
+
+.consign-keypoints-image {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.consign-keypoints-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Why Choose Section */
+.consign-why-section {
+    padding: 80px 0;
+    background: #131439;
+    color: var(--white-color);
+}
+
+.consign-why-title {
+    color: var(--white-color);
+    font-family: "Segoe UI";
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.consign-why-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: "Segoe UI";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.consign-features-row {
+    margin-bottom: 30px;
+}
+
+.consign-feature-box {
+    text-align: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.consign-feature-icon {
+    width: 80px;
+    height: 80px;
+    background: transparent;
+    border: 3px solid #4d91d5;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+}
+
+.consign-feature-icon i {
+    color: #4d91d5;
+    font-size: 36px;
+}
+
+.consign-feature-icon img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.consign-feature-title {
+    color: var(--white-color);
+    font-family: "Segoe UI";
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.consign-feature-text {
+    color: rgba(255, 255, 255, 0.85);
+    font-family: "Segoe UI";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.consign-why-cta {
+    padding: 14px 40px;
+}
+
+/* Process Section */
+.consign-process-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.consign-process-image {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.consign-process-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.consign-process-title {
+    color: #131439;
+    font-family: "Segoe UI";
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+.consign-process-subtitle {
+    color: #666;
+    font-family: "Segoe UI";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+.consign-process-steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.consign-step-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    flex-direction: column;
+}
+
+.consign-step-icon {
+    flex-shrink: 0;
+}
+
+.consign-step-number {
+    width: 60px;
+    height: 60px;
+    background: #4d91d5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-color);
+    font-family: "Segoe UI";
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.consign-step-content {
+    flex-grow: 1;
+}
+
+.consign-step-title {
+    color: #131439;
+    font-family: "Segoe UI";
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.consign-step-text {
+    color: #666;
+    font-family: "Segoe UI";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* Valuation Form Section */
+.consign-valuation-section {
+    padding: 80px 0;
+    background: var(--white-color);
+}
+
+.consign-form-subtitle {
+    color: #4d91d5;
+    font-family: "Segoe UI";
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.consign-form-title {
+    color: #131439;
+    font-family: "Segoe UI";
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.consign-valuation-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.consign-form-section-title {
+    color: #131439;
+    font-family: "Segoe UI";
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    margin-top: 15px;
+}
+
+.consign-form-input,
+.consign-form-textarea {
+    width: 100%;
+    padding: 8px 16px;
+    font-family: "Segoe UI";
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+    background: #FAFAFA;
+    border: 2px solid #D9D9D9;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+
+.consign-form-input::placeholder,
+.consign-form-textarea::placeholder {
+    color: #000000;
+}
+
+.consign-form-textarea {
+    resize: vertical;
+}
+
+.consign-radio-label {
+    color: #131439;
+    font-family: "Segoe UI";
+    font-size: 16px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.consign-radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.consign-radio-item {
+    display: flex;
+    align-items: center;
+    color: #333;
+    font-family: "Segoe UI";
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+.consign-radio-item input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    cursor: pointer;
+    accent-color: #4d91d5;
+}
+
+.consign-submit-btn {
+    padding: 14px 45px;
+    font-size: 16px;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .consign-hero-banner {
+        height: 50vh;
+        min-height: 380px;
+    }
+
+    .consign-hero-title {
+        font-size: 44px;
+    }
+
+    .consign-hero-subtitle {
+        font-size: 16px;
+    }
+
+    .consign-keypoints-section,
+    .consign-why-section,
+    .consign-process-section,
+    .consign-valuation-section {
+        padding: 60px 0;
+    }
+
+    .consign-section-title,
+    .consign-process-title {
+        font-size: 32px;
+    }
+
+    .consign-why-title,
+    .consign-form-title {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 767px) {
+    .consign-hero-banner {
+        height: 45vh;
+        min-height: 320px;
+    }
+
+    .consign-hero-title {
+        font-size: 32px;
+    }
+
+    .consign-hero-subtitle {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .consign-keypoints-section,
+    .consign-why-section,
+    .consign-process-section,
+    .consign-valuation-section {
+        padding: 50px 0;
+    }
+
+    .consign-section-title,
+    .consign-process-title {
+        font-size: 28px;
+    }
+
+    .consign-why-title,
+    .consign-form-title {
+        font-size: 32px;
+    }
+
+    .consign-why-subtitle {
+        margin-bottom: 40px;
+    }
+
+    .consign-feature-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .consign-feature-icon i {
+        font-size: 32px;
+    }
+
+    .consign-step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .consign-step-title {
+        font-size: 16px;
+    }
+
+    .consign-step-text {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .consign-hero-title {
+        font-size: 26px;
+    }
+
+    .consign-section-title,
+    .consign-process-title {
+        font-size: 24px;
+    }
+
+    .consign-why-title,
+    .consign-form-title {
+        font-size: 28px;
+    }
+
+    .consign-hero-btn,
+    .consign-cta-btn,
+    .consign-why-cta,
+    .consign-submit-btn {
+        width: 100%;
+        display: block;
+    }
+}
+
+/* Service Tabs Section */
+.service-tabs-section {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.service-tabs-list {
+    background: #FAFAFA;
+    padding: 30px;
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+}
+.service-tabs-title {
+  color: #131439;
+  font-family: "Segoe UI";
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 25px;
+}
+
+.service-tab-item {
+  color: #131439 !important;
+  font-family: "Segoe UI";
+  font-size: 16px;
+  font-weight: 700;
+  padding: 15px 20px !important;
+  border: 1px solid #eee !important;
+  margin-bottom: 10px;
+  border-radius: 5px !important;
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.service-tab-item:hover {
+  background-color: #f8f9fa;
+  color: #4d91d5 !important;
+}
+
+.service-tab-item.active {
+  background-color: #131439 !important;
+  color: #fff !important;
+  border-color: #131439 !important;
+}
+
+.service-tab-item i {
+  font-size: 18px;
+}
+
+.service-content-title {
+  color: #131439;
+  font-family: "Segoe UI";
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.service-content-subtitle {
+  color: #131439;
+  font-family: "Segoe UI";
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.service-content-text {
+  color: #555;
+  font-family: "Segoe UI";
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.service-content-image {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.service-content-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.seasonal-service .seawall-hero-title{
+  color: #131439 !important;
+}
+.seasonal-service .trade-hero-subtitle{
+  color: #131439 !important;
+}
+.catgory-list{
+  margin: 20px;
+}
+.parts-logosec .brand-logos-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
+    gap: 60px 80px;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: unset;
+}
+.docks-lift-cards .seawall-feature-image {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+.docks-lift-cards h3 {
+  color: #131439;
+font-family: "Segoe UI";
+font-size: 40px;
+font-style: normal;
+font-weight: 900;
+line-height: 48px; /* 120% */
+}
+.docks-lift-cards h4 {
+color: var(--Navy-Blue, #131439);
+font-family: "Segoe UI";
+font-size: 24px;
+font-style: normal;
+font-weight: 900;
+line-height: 32px; /* 133.333% */
+}
+@media (max-width: 991px) {
+  .service-tabs-list {
+    margin-bottom: 40px;
+  }
+
+  .service-content-title {
+    font-size: 32px;
+  }
+
+  .service-content-image {
+    height: 300px;
+  }
+}
+
+/* ====================================
+   DE-ICERS PAGE STYLES
+==================================== */
+
+/* Image Gallery Section */
+.deicer-gallery-section {
+  padding: 0;
+  background: #fff;
+}
+
+.deicer-gallery-container {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.deicer-gallery-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.deicer-gallery-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.deicer-gallery-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.deicer-gallery-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.deicer-gallery-item {
+  flex: 0 0 auto;
+  width: 16.666%;
+  min-width: 150px;
+}
+
+.deicer-gallery-item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Kasco Models Table Section */
+.deicer-table-section {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.deicer-table-title {
+  color: #000;
+  font-family: "Segoe UI";
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.deicer-table-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.deicer-table {
+  background: #fff;
+  border: none;
+  width: 100%;
+}
+
+.deicer-table thead tr {
+  border-bottom: 2px solid #000;
+}
+
+.deicer-table th {
+  padding: 12px 15px;
+  font-family: "Segoe UI";
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  border: none;
+  text-align: left;
+}
+
+.deicer-table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.deicer-table td {
+  padding: 12px 15px;
+  font-family: "Segoe UI";
+  font-size: 15px;
+  color: #333;
+  border: none;
+}
+
+.deicer-table-note {
+  text-align: center;
+  font-family: "Segoe UI";
+  font-size: 13px;
+  font-style: italic;
+  color: #666;
+  margin-top: 25px;
+}
+
+/* Responsive De-Icers */
+@media (max-width: 991px) {
+  .deicer-gallery-item {
+    min-width: 120px;
+  }
+
+  .deicer-gallery-item img {
+    height: 140px;
+  }
+
+  .deicer-table-section {
+    padding: 60px 0;
+  }
+
+  .deicer-table-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .deicer-table th,
+  .deicer-table td {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  .deicer-gallery-item {
+    min-width: 100px;
+    width: 25%;
+  }
+
+  .deicer-gallery-item img {
+    height: 120px;
+  }
+
+  .deicer-table-section {
+    padding: 50px 0;
+  }
+
+  .deicer-table-title {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  .deicer-table th,
+  .deicer-table td {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .deicer-gallery-item {
+    min-width: 80px;
+    width: 33.333%;
+  }
+
+  .deicer-gallery-item img {
+    height: 100px;
+  }
+
+  .deicer-table-title {
+    font-size: 20px;
+  }
+
+  .deicer-table th,
+  .deicer-table td {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+  .deicer-table-note {
+    font-size: 12px;
+  }
+}
+
+/* ====================================
+   DOCKS & LIFT PAGE STYLES
+==================================== */
+
+/* Three Image Gallery Section */
+.docks-gallery-section {
+  padding: 0;
+  background: #fff;
+}
+
+.docks-gallery-container {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
+.docks-gallery-item {
+  flex: 1;
+  min-width: 0;
+}
+
+.docks-gallery-item img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+.floating-docks-gallery .deicer-gallery-item img {
+    height: 100%;
+}
+.floating-docks-gallery .deicer-gallery-container {
+    gap: 10px;
+}
+/* Responsive Docks Gallery */
+@media (max-width: 991px) {
+  .docks-gallery-item img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 767px) {
+  .docks-gallery-container {
+    flex-direction: column;
+  }
+
+  .docks-gallery-item img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .docks-gallery-item img {
+    height: 200px;
+  }
+}
+
+/* Choose Dock Section */
+.choose-dock-section {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.choose-dock-title {
+  color: #131439;
+  font-family: "Segoe UI";
+  font-size: 40px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.choose-dock-card {
+  padding: 0 15px;
+}
+
+.choose-dock-image {
+  width: 100%;
+  height: 250px;
+  background-color: #d9d9d9;
+  margin-bottom: 25px;
+}
+
+.choose-dock-card-title {
+  color: #131439;
+  font-family: "Segoe UI";
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.choose-dock-text {
+  color: #333;
+  font-family: "Segoe UI";
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.choose-dock-availability {
+  color: #333;
+  font-family: "Segoe UI";
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+  .choose-dock-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+  
+  .choose-dock-card-title {
+    font-size: 20px;
+  }
+}
+
+/* ====================================
+   CONTACT PAGE STYLES
+==================================== */
+
+/* Contact Form Section */
+.contact-form-section {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.contact-form-wrapper {
+    background: #f8f9fa;
+    padding: 50px 40px;
+    border-radius: 0;
+    width: 640px;
+    position: absolute;
+    top: -33%;
+    left: -20%;
+    z-index: 5;
+    border: 1px solid #D9D9D9;
+    text-align: center;
+}
+
+.contact-form-label {
+  color: #4d91d5;
+  font-family: "Segoe UI";
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.contact-form-title {
+  color: #131439;
+  font-family: "Segoe UI";
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.contact-form-input,
+.contact-form-textarea,
+.contact-form-select {
+  width: 100%;
+  padding: 12px 16px;
+  font-family: "Segoe UI";
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form-input:focus,
+.contact-form-textarea:focus,
+.contact-form-select:focus {
+  border-color: #4d91d5;
+}
+
+.contact-form-input::placeholder,
+.contact-form-textarea::placeholder {
+  color: #999;
+}
+
+.contact-form-textarea {
+  resize: vertical;
+}
+
+.contact-submit-btn {
+  display: inline-block;
+  color: #fff;
+  font-family: "Segoe UI";
+  font-size: 16px;
+  font-weight: 700;
+  background: #131439;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-submit-btn:hover {
+  background: #4d91d5;
+}
+
+/* Contact Info */
+.contact-info-wrapper {
+  padding: 40px 30px;
+}
+
+.contact-info-title {
+  color: #131439;
+  font-family: "Segoe UI";
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 35px;
+  gap: 20px;
+}
+
+.contact-icon {
+  width: 45px;
+  height: 45px;
+  background: #4d91d5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-icon i {
+  color: #fff;
+  font-size: 20px;
+}
+
+.contact-details {
+  flex: 1;
+}
+
+.contact-label {
+  color: #131439;
+  font-family: "Segoe UI";
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.contact-link {
+  color: #131439;
+  font-family: "Segoe UI";
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #4d91d5;
+  text-decoration: none;
+}
+
+.contact-text {
+  color: #666;
+  font-family: "Segoe UI";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Map Section */
+.contact-map-section {
+  padding: 0;
+  background: #e8e8e8;
+}
+
+.contact-map-wrapper {
+  max-width: 100%;
+}
+
+.contact-map-title {
+  color: #131439;
+  font-family: "Segoe UI";
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  padding: 60px 0 40px;
+  margin: 0;
+  background: #e8e8e8;
+}
+
+.contact-map-container {
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+}
+
+.contact-map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.flite-board-banner .flite-board-txt{
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+.flite-board-banner .seawall-esp-logo {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+.flite-board-banner {
+    min-height: 720px;
+}
+/* Responsive Contact Page */
+@media (max-width: 991px) {
+  .contact-form-section {
+    padding: 60px 0;
+  }
+
+  .contact-form-wrapper {
+    padding: 40px 30px;
+  }
+
+  .contact-form-title {
+    font-size: 28px;
+  }
+
+  .contact-info-wrapper {
+    padding: 30px 20px;
+  }
+
+  .contact-info-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .contact-map-title {
+    font-size: 32px;
+    padding: 50px 0 30px;
+  }
+
+  .contact-map-container {
+    height: 400px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-form-section {
+    padding: 50px 0;
+  }
+
+  .contact-form-wrapper {
+    padding: 30px 20px;
+  }
+
+  .contact-form-title {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  .contact-info-wrapper {
+    padding: 20px 15px;
+    margin-top: 30px;
+  }
+
+  .contact-info-title {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+
+  .contact-info-item {
+    margin-bottom: 30px;
+    gap: 15px;
+  }
+
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .contact-icon i {
+    font-size: 18px;
+  }
+
+  .contact-map-title {
+    font-size: 28px;
+    padding: 40px 0 25px;
+  }
+
+  .contact-map-container {
+    height: 350px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-form-wrapper {
+    padding: 25px 15px;
+  }
+
+  .contact-form-title {
+    font-size: 20px;
+  }
+
+  .contact-submit-btn {
+    width: 100%;
+    padding: 12px 30px;
+  }
+
+  .contact-info-title {
+    font-size: 20px;
+  }
+
+  .contact-map-title {
+    font-size: 24px;
+  }
+
+  .contact-map-container {
+    height: 300px;
+  }
+}
+
+/* ========================================
+   FLITEBOARD PRODUCTS SECTION
+========================================= */
+.fliteboard-products-section {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.fliteboard-products-title {
+  font-size: 40px;
+  font-weight: 900;
+  font-family: 'Segoe UI Black', 'Segoe UI', sans-serif;
+  color: #131439;
+  text-align: center;
+  margin-bottom: 50px;
+  line-height: 48px;
+}
+
+.fliteboard-product-card {
+  background: #fff;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.fliteboard-product-image {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fliteboard-product-image img {
+max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fliteboard-product-info p{
+  font-weight: 700;
+    margin-bottom: 5px;
+}
+
+
+/* Responsive Fliteboard Products */
+@media (max-width: 991px) {
+  .fliteboard-products-section {
+    padding: 60px 0;
+  }
+
+  .fliteboard-products-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .fliteboard-product-image {
+    height: 250px;
+  }
+
+  .fliteboard-product-name {
+    font-size: 16px;
+  }
+
+  .fliteboard-product-price {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 767px) {
+  .fliteboard-products-section {
+    padding: 50px 0;
+  }
+
+  .fliteboard-products-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .fliteboard-product-image {
+    height: 220px;
+  }
+
+  .fliteboard-product-info {
+    padding: 20px 15px;
+  }
+
+  .fliteboard-product-name {
+    font-size: 15px;
+  }
+
+  .fliteboard-product-price {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .fliteboard-products-title {
+    font-size: 24px;
+  }
+
+  .fliteboard-product-image {
+    height: 200px;
+  }
+
+  .fliteboard-product-card {
+    margin-bottom: 20px;
   }
 }

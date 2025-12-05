@@ -163,4 +163,16 @@ $(document).ready(function() {
     // Initially set all accordion headers as collapsed
     $('.accordion-header').addClass('collapsed');
 
+    // Smooth scroll for anchor links (Trade/Consign page)
+    // Exclude Bootstrap tabs and other data-toggle elements
+    $('a[href^="#"]').not('[data-toggle]').on('click', function(e) {
+        var target = $(this.getAttribute('href'));
+        if(target.length) {
+            e.preventDefault();
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top - 80
+            }, 1000);
+        }
+    });
+
 });
