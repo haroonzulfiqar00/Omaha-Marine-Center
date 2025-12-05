@@ -59,6 +59,7 @@ a {
 }
 a:hover {
   text-decoration: none;
+  color: #000;
 }
 
 .container-fluid {
@@ -833,13 +834,13 @@ p span {
 }
 
 .brand-logo-item img {
-  max-height: 50px;
+  /* max-height: 50px; */
   width: auto;
   max-width: 180px;
-  object-fit: contain;
+  /* object-fit: contain;
   filter: grayscale(100%);
   opacity: 0.7;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; */
 }
 
 .brand-logo-item:hover img {
@@ -1160,6 +1161,25 @@ p span {
   z-index: 2;
 }
 
+/* Proshop Trendy Card - Overlay from bottom to top */
+.proshop-trendycard .service-content::before {
+  content: '';
+  position: absolute;
+  bottom: -90px;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(
+    to top,
+    rgba(19, 20, 57, 0.9) 0%,
+    rgba(19, 20, 57, 0.7) 30%,
+    rgba(19, 20, 57, 0.4) 60%,
+    rgba(19, 20, 57, 0) 100%
+  );
+  z-index: -1;
+  pointer-events: none;
+}
+
 .service-title {
   color: var(--white-color);
   font-family: "Segoe UI";
@@ -1167,7 +1187,6 @@ p span {
   font-weight: 900;
   line-height: 44px;
   margin-bottom: 10px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .service-subtitle {
@@ -1178,7 +1197,6 @@ p span {
   line-height: 24px;
   opacity: 0.9;
   margin-bottom: 0;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .service-card-link {
@@ -1518,7 +1536,7 @@ p span {
 }
 
 .info-card-content {
-  padding: 30px 20px;
+  padding: 30px 0px;
   text-align: left;
 }
 
@@ -1533,9 +1551,6 @@ p span {
   text-align: left;
 }
 
-.info-card-link:hover .info-card-title {
-  color: #4d91d5;
-}
 
 .info-card-description {
   color: #666;
@@ -1594,6 +1609,404 @@ p span {
 
   .info-card-title {
     font-size: 20px;
+  }
+}
+
+/* Proshop Video Card - Perfect Video Iframe Alignment */
+.proshop-vidcard .video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.proshop-vidcard .video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover;
+}
+
+.proshop-vidcard .info-card-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: #000;
+}
+
+/* Responsive Proshop Video Cards */
+@media (max-width: 991px) {
+  .proshop-vidcard .video-wrapper {
+    padding-bottom: 56.25%;
+  }
+}
+
+@media (max-width: 767px) {
+  .proshop-vidcard .video-wrapper {
+    padding-bottom: 56.25%;
+  }
+}
+
+@media (max-width: 576px) {
+  .proshop-vidcard .video-wrapper {
+    padding-bottom: 56.25%;
+  }
+}
+
+/* ========================================
+   PROSHOP CATEGORY GALLERY
+========================================= */
+.proshop-category-gallery {
+  padding: 0;
+  background: #fff;
+}
+
+.category-gallery-grid {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.category-gallery-item {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+  cursor: pointer;
+}
+
+.category-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.category-gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.category-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 20px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.4) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.category-gallery-item:hover .category-overlay {
+  padding: 40px 20px;
+}
+
+.category-name {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+  line-height: 1.3;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Category Gallery */
+@media (max-width: 991px) {
+  .category-gallery-item {
+    height: 250px;
+  }
+
+  .category-name {
+    font-size: 18px;
+  }
+
+  .category-overlay {
+    padding: 25px 15px;
+  }
+
+  .category-gallery-item:hover .category-overlay {
+    padding: 30px 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .category-gallery-grid {
+    flex-wrap: wrap;
+  }
+
+  .category-gallery-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+    height: 220px;
+  }
+
+  .category-name {
+    font-size: 16px;
+  }
+
+  .category-overlay {
+    padding: 20px 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .category-gallery-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: 250px;
+  }
+
+  .category-name {
+    font-size: 18px;
+  }
+}
+
+/* ========================================
+   SKI SHOP HERO BANNER
+========================================= */
+.skishop-hero {
+  min-height: 600px;
+  display: flex;
+  align-items: stretch;
+  padding: 0;
+  overflow: hidden;
+}
+
+.skishop-hero .seawall-hero-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.skishop-hero .hero-overlay {
+    position: absolute;
+    right: 0 !important;
+    left: UNSET ! IMPORTANT;
+    top: 0 !important;
+    width: 50%;
+    height: 100%;
+    background: rgb(19 20 57 / 80%);
+    z-index: 1;
+}
+
+.skishop-hero .seawall-hero-content {
+  position: relative;
+  width: 50%;
+  margin-left: 50%;
+  padding: 80px 60px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.skishop-hero .trade-hero-subtitle {
+  font-size: 13px;
+  font-weight: 600;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+.skishop-hero .seawall-hero-title {
+  font-size: 56px;
+  font-weight: 700;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.skishop-hero p {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  opacity: 0.95;
+}
+
+.skishop-hero .blue-btn {
+  align-self: flex-start;
+}
+.skishop-catagorycard .service-subtitle{
+  color: #1D1D1D;
+  padding: 10px 0;
+}
+.skishop-catagorycard .service-title{
+  font-size: 24px;
+  text-align: left;
+}
+.skishop-catagorycard .service-content {
+    bottom: 20px;
+}
+/* Responsive Ski Shop Hero */
+@media (max-width: 991px) {
+  .skishop-hero {
+    min-height: 500px;
+    flex-direction: column;
+  }
+
+  .skishop-hero .seawall-hero-image {
+    position: relative;
+    width: 100%;
+    height: 350px;
+  }
+
+  .skishop-hero .hero-overlay {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background: linear-gradient(135deg, #1a2744 0%, #0e233a 50%, #131439 100%);
+  }
+
+  .skishop-hero .seawall-hero-content {
+    width: 100%;
+    margin-left: 0;
+    padding: 60px 40px;
+  }
+
+  .skishop-hero .seawall-hero-title {
+    font-size: 42px;
+  }
+
+  .skishop-hero p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .skishop-hero {
+    min-height: auto;
+  }
+
+  .skishop-hero .seawall-hero-image {
+    height: 300px;
+  }
+
+  .skishop-hero .seawall-hero-content {
+    padding: 50px 30px;
+  }
+
+  .skishop-hero .trade-hero-subtitle {
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+
+  .skishop-hero .seawall-hero-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .skishop-hero p {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .skishop-hero .seawall-hero-image {
+    height: 250px;
+  }
+
+  .skishop-hero .seawall-hero-content {
+    padding: 40px 20px;
+  }
+
+  .skishop-hero .seawall-hero-title {
+    font-size: 32px;
+  }
+
+  .skishop-hero .blue-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Ski Shop Brand Logos Section */
+.skishop-brands-section {
+  padding: 60px 0;
+  background: #fff;
+}
+
+.skishop-brands-section .brands-logo-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.skishop-brands-section .brand-logo-item {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skishop-brands-section .brand-logo-img {
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .brands-logo-grid {
+    gap: 30px;
+  }
+
+  .brand-logo-img {
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 767px) {
+  .skishop-brands-section {
+    padding: 40px 0;
+  }
+
+  .brands-logo-grid {
+    gap: 20px;
+  }
+
+  .brand-logo-img {
+    max-width: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  .brands-logo-grid {
+    gap: 15px;
+  }
+
+  .brand-logo-img {
+    max-width: 80px;
   }
 }
 
@@ -3436,6 +3849,7 @@ line-height: 32px; /* 133.333% */
   width: 100%;
   overflow-x: auto;
   scrollbar-width: thin;
+  gap: 10px;
 }
 
 .deicer-gallery-container::-webkit-scrollbar {
@@ -4640,6 +5054,31 @@ line-height: 32px;
             height: 600px;
             display: flex;
             align-items: center;
+            overflow: hidden;
+        }
+
+        /* Background Video for Ourstory Section */
+        .ourstory-background-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            object-fit: cover;
+        }
+
+        .ourstory .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
         }
 
         .ourstory .aboutuscntnt {
@@ -4668,3 +5107,15 @@ line-height: 32px;
             color: #555;
             margin-bottom: 30px;
         }
+
+        .proshop-hero .hero-overlay {
+          background:linear-gradient(to bottom, rgb(19 20 57), rgba(19, 20, 57, 0));
+              z-index: 1;
+      }
+
+      .proshop-galry .deicer-gallery-item img {
+    height: 270px;
+}
+      .proshop-galry .deicer-gallery-item {
+    width: 22%;
+}
