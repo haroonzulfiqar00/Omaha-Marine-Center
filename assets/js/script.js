@@ -175,4 +175,48 @@ $(document).ready(function() {
         }
     });
 
+    // Video Brand Filter Functionality
+    $('.video-brand-tab').on('click', function() {
+        const selectedBrand = $(this).data('brand');
+
+        // Update active state
+        $('.video-brand-tab').removeClass('active');
+        $(this).addClass('active');
+
+        // Filter videos
+        if (selectedBrand === 'all') {
+            $('.video-card').removeClass('hidden').fadeIn(300);
+        } else {
+            $('.video-card').each(function() {
+                const videoBrand = $(this).data('brand');
+                if (videoBrand === selectedBrand) {
+                    $(this).removeClass('hidden').fadeIn(300);
+                } else {
+                    $(this).fadeOut(300, function() {
+                        $(this).addClass('hidden');
+                    });
+                }
+            });
+        }
+    });
+
+    // Video play functionality
+    $('.video-thumbnail').on('click', function() {
+        const video = $(this).find('video')[0];
+        const overlay = $(this).find('.video-play-overlay');
+
+        if (video.paused) {
+            video.play();
+            overlay.fadeOut(300);
+        } else {
+            video.pause();
+            overlay.fadeIn(300);
+        }
+    });
+
+    // Reset overlay when video ends
+    $('.video-player').on('ended', function() {
+        $(this).siblings('.video-play-overlay').fadeIn(300);
+    });
+
 });
